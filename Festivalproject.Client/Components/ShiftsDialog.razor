@@ -1,0 +1,177 @@
+@using Festivalproject.Shared.Models
+@using Festivalproject.Client.Services
+@using Blazored.Modal.Services
+
+@inject IJSRuntime JSRuntime
+@inject IShiftRegistrationService ShiftRegistrationService
+@inject IShiftService ShiftService
+
+
+<div>
+    <ModalContent>
+        @if (ConfirmationVisible)
+        {
+            <div class="HeaderContainer">
+                <h3 class="Header">Godt gået 👍, du har tilmeldt dig vagten @ModalShiftTitle</h3>
+            </div>
+            <div class="parent">
+                <div class="infoDiv">
+                    <div>Beskrivelse: @ModalShiftDescription</div>
+                    <div>Varighed: @ModalShiftDuration timer</div>
+                    <div>Starttidspunkt: @ModalShiftStartLocalTime</div>
+                    <div>Sluttidspunkt: @ModalShiftEndLocalTime</div>
+                    <div>Område: @ModalShiftArea</div>
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="HeaderContainer">
+                <h3 class="Header">Information om @ModalShiftTitle</h3>
+            </div>
+            <div class="parent">
+                <div class="infoDiv">
+                    <div>Beskrivelse: @ModalShiftDescription</div>
+                    <div>Varighed: @ModalShiftDuration timer</div>
+                    <div>Starttidspunkt: @ModalShiftStartLocalTime</div>
+                    <div>Sluttidspunkt: @ModalShiftEndLocalTime</div>
+                    <div>Område: @ModalShiftArea</div>
+                </div>
+                <div class="buttonDiv">
+                    <button @onclick="CreateShiftRegistration" class="submit-button">Tilmeld Vagt</button>
+                </div>
+            </div>
+        }
+    </ModalContent>
+</div>
+
+@code {
+    
+    //Parameters
+    //Boolean to change html based on if the confirmation is visible or not
+    private bool ConfirmationVisible { get; set; } = false;
+
+    //Injecting the modal services to be used later
+    [CascadingParameter]
+    BlazoredModalInstance BlazoredModal { get; set; }
+
+    
+    //Parameters from the modal method on AvailableShifts "ShiftsDialog"
+    [Parameter]
+    public string ModalShiftId { get; set; }
+
+    [Parameter]
+    public string ModalShiftTitle { get; set; }
+    
+    //These two parameters are being used when passing/making a post "tilmeld vagt" to the database
+    [Parameter]
+    public DateTime ModalShiftStart { get; set; }
+
+    [Parameter]
+    public DateTime ModalShiftEnd { get; set; }
+    
+    //Crating two new parameters for the local time of the shift start and end time to be used in the html
+    [Parameter]
+    public DateTime ModalShiftStartLocalTime { get; set; }
+
+    [Parameter]
+    public DateTime ModalShiftEndLocalTime { get; set; }
+
+    [Parameter]
+    public string ModalShiftDescription { get; set; }
+
+    [Parameter]
+    public string ModalShiftArea { get; set; }
+
+    [Parameter]
+    public string ModalShiftDuration { get; set; }
+
+    [Parameter]
+    public string ModalUserId { get; set; }
+
+    [Parameter]
+    public string ModalShiftType { get; set; }
+
+    private List<Shift> AvailableShift { get; set; } = new();
+    
+    //Method for closing the modal
+    private async Task CloseModal()
+    {
+        await BlazoredModal.CloseAsync(ModalResult.Ok(true));
+    }
+    
+    //OnInitializedAsync method for setting the modal shift start and end time to local time which are being used in the html
+    protected override void OnInitialized()
+    {
+        ModalShiftStartLocalTime = ModalShiftStart.ToLocalTime();
+        ModalShiftEndLocalTime = ModalShiftEnd.ToLocalTime();
+    }
+
+
+    //method for refreshing the calender
+    public async Task RefreshCalenderEvents()
+    {
+        AvailableShift = await ShiftService.GetShiftsByStatus(false);
+        
+    // Convert the list of shifts to an array of events
+        var events = AvailableShift.Select(s => new
+        {
+            shiftId = s.Id,
+            title = s.Name,
+            start = s.startTime.ToString("o"),
+            end = s.endTime.ToString("o"),
+            description = s.Description,
+            area = s.Area,
+            _duration = Convert.ToString(s.Duration),
+            type = s.Type,
+            _userId = ModalUserId
+        }).ToArray();
+
+    // Call the JS function to re-initialize the calendar with the updated events
+        var module = await JSRuntime.InvokeAsync<IJSObjectReference>("import", "./js/fullcalender.js");
+        await module.InvokeVoidAsync("initializeCalendar", new object[] { events, DotNetObjectReference.Create(this) });
+    }
+    
+
+    //Method for creating a shiftregistration
+    public async Task CreateShiftRegistration()
+    {
+    //Create a new shiftregistration object and assigning parameters that are being parsed in the modal to the post
+        var shiftRegistration = new ShiftRegistration();
+
+
+    //Set the properties of the shiftregistration object
+        shiftRegistration.ShiftId = ModalShiftId;
+        shiftRegistration.UserId = ModalUserId;
+        shiftRegistration.ShiftName = ModalShiftTitle;
+        shiftRegistration.StartTime = ModalShiftStart;
+        shiftRegistration.EndTime = ModalShiftEnd;
+        shiftRegistration.ShiftDuration = int.Parse(ModalShiftDuration);
+        shiftRegistration.Description = ModalShiftDescription;
+        shiftRegistration.ShiftArea = ModalShiftArea;
+        shiftRegistration.ShiftType = ModalShiftType;
+        
+
+    //Create a new shiftregistration in the database via service
+        await ShiftRegistrationService.CreateShiftRegistration(shiftRegistration);
+
+    //Update the shift status by shift id to isOccupied true via service
+        await ShiftService.UpdateShiftStatusByShiftId(ModalShiftId, true);
+
+        
+    // Refresh the calendar events
+        await RefreshCalenderEvents();
+        
+    //Show confirmation
+        ConfirmationVisible = true;
+        StateHasChanged();
+
+    //Wait for 5 seconds
+        await Task.Delay(5000);
+
+
+    //Close the modal
+        await CloseModal();
+    }
+
+}

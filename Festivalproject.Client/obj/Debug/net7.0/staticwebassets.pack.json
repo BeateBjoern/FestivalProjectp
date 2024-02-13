@@ -1,0 +1,161 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/idabjorn/Documents/repositories/festivalbookingsystem/Festivalproject.Client/bin/Debug/net7.0/wwwroot/_framework/blazor.webassembly.js",
+      "PackagePath": "staticwebassets/_framework/blazor.webassembly.js"
+    },
+    {
+      "Id": "/Users/idabjorn/Documents/repositories/festivalbookingsystem/Festivalproject.Client/obj/Debug/net7.0/build-gz/uf6kl5Xj.gz",
+      "PackagePath": "staticwebassets/_framework/blazor.webassembly.js.gz"
+    },
+    {
+      "Id": "/Users/idabjorn/Documents/repositories/festivalbookingsystem/Festivalproject.Client/obj/Debug/net7.0/scopedcss/bundle/Festivalproject.Client.styles.css",
+      "PackagePath": "staticwebassets/Festivalproject.Client.styles.css"
+    },
+    {
+      "Id": "/Users/idabjorn/Documents/repositories/festivalbookingsystem/Festivalproject.Client/wwwroot/ProfileHead.png",
+      "PackagePath": "staticwebassets/ProfileHead.png"
+    },
+    {
+      "Id": "/Users/idabjorn/Documents/repositories/festivalbookingsystem/Festivalproject.Client/wwwroot/anthony-delanoix-hzgs56Ze49s-unsplash.jpg",
+      "PackagePath": "staticwebassets/anthony-delanoix-hzgs56Ze49s-unsplash.jpg"
+    },
+    {
+      "Id": "/Users/idabjorn/Documents/repositories/festivalbookingsystem/Festivalproject.Client/wwwroot/appsettings.Production.json",
+      "PackagePath": "staticwebassets/appsettings.Production.json"
+    },
+    {
+      "Id": "/Users/idabjorn/Documents/repositories/festivalbookingsystem/Festivalproject.Client/wwwroot/appsettings.json",
+      "PackagePath": "staticwebassets/appsettings.json"
+    },
+    {
+      "Id": "/Users/idabjorn/Documents/repositories/festivalbookingsystem/Festivalproject.Client/wwwroot/austin-neill-hgO1wFPXl3I-unsplash.jpg",
+      "PackagePath": "staticwebassets/austin-neill-hgO1wFPXl3I-unsplash.jpg"
+    },
+    {
+      "Id": "/Users/idabjorn/Documents/repositories/festivalbookingsystem/Festivalproject.Client/wwwroot/bluesuccess.gif",
+      "PackagePath": "staticwebassets/bluesuccess.gif"
+    },
+    {
+      "Id": "/Users/idabjorn/Documents/repositories/festivalbookingsystem/Festivalproject.Client/wwwroot/check.gif",
+      "PackagePath": "staticwebassets/check.gif"
+    },
+    {
+      "Id": "/Users/idabjorn/Documents/repositories/festivalbookingsystem/Festivalproject.Client/wwwroot/confettiHeader.jpg",
+      "PackagePath": "staticwebassets/confettiHeader.jpg"
+    },
+    {
+      "Id": "/Users/idabjorn/Documents/repositories/festivalbookingsystem/Festivalproject.Client/wwwroot/css/app.css",
+      "PackagePath": "staticwebassets/css/app.css"
+    },
+    {
+      "Id": "/Users/idabjorn/Documents/repositories/festivalbookingsystem/Festivalproject.Client/wwwroot/css/bootstrap/bootstrap.min.css",
+      "PackagePath": "staticwebassets/css/bootstrap/bootstrap.min.css"
+    },
+    {
+      "Id": "/Users/idabjorn/Documents/repositories/festivalbookingsystem/Festivalproject.Client/wwwroot/css/bootstrap/bootstrap.min.css.map",
+      "PackagePath": "staticwebassets/css/bootstrap/bootstrap.min.css.map"
+    },
+    {
+      "Id": "/Users/idabjorn/Documents/repositories/festivalbookingsystem/Festivalproject.Client/wwwroot/css/fullcalender.css",
+      "PackagePath": "staticwebassets/css/fullcalender.css"
+    },
+    {
+      "Id": "/Users/idabjorn/Documents/repositories/festivalbookingsystem/Festivalproject.Client/wwwroot/css/open-iconic/FONT-LICENSE",
+      "PackagePath": "staticwebassets/css/open-iconic"
+    },
+    {
+      "Id": "/Users/idabjorn/Documents/repositories/festivalbookingsystem/Festivalproject.Client/wwwroot/css/open-iconic/ICON-LICENSE",
+      "PackagePath": "staticwebassets/css/open-iconic"
+    },
+    {
+      "Id": "/Users/idabjorn/Documents/repositories/festivalbookingsystem/Festivalproject.Client/wwwroot/css/open-iconic/README.md",
+      "PackagePath": "staticwebassets/css/open-iconic/README.md"
+    },
+    {
+      "Id": "/Users/idabjorn/Documents/repositories/festivalbookingsystem/Festivalproject.Client/wwwroot/css/open-iconic/font/css/open-iconic-bootstrap.min.css",
+      "PackagePath": "staticwebassets/css/open-iconic/font/css/open-iconic-bootstrap.min.css"
+    },
+    {
+      "Id": "/Users/idabjorn/Documents/repositories/festivalbookingsystem/Festivalproject.Client/wwwroot/css/open-iconic/font/fonts/open-iconic.eot",
+      "PackagePath": "staticwebassets/css/open-iconic/font/fonts/open-iconic.eot"
+    },
+    {
+      "Id": "/Users/idabjorn/Documents/repositories/festivalbookingsystem/Festivalproject.Client/wwwroot/css/open-iconic/font/fonts/open-iconic.otf",
+      "PackagePath": "staticwebassets/css/open-iconic/font/fonts/open-iconic.otf"
+    },
+    {
+      "Id": "/Users/idabjorn/Documents/repositories/festivalbookingsystem/Festivalproject.Client/wwwroot/css/open-iconic/font/fonts/open-iconic.svg",
+      "PackagePath": "staticwebassets/css/open-iconic/font/fonts/open-iconic.svg"
+    },
+    {
+      "Id": "/Users/idabjorn/Documents/repositories/festivalbookingsystem/Festivalproject.Client/wwwroot/css/open-iconic/font/fonts/open-iconic.ttf",
+      "PackagePath": "staticwebassets/css/open-iconic/font/fonts/open-iconic.ttf"
+    },
+    {
+      "Id": "/Users/idabjorn/Documents/repositories/festivalbookingsystem/Festivalproject.Client/wwwroot/css/open-iconic/font/fonts/open-iconic.woff",
+      "PackagePath": "staticwebassets/css/open-iconic/font/fonts/open-iconic.woff"
+    },
+    {
+      "Id": "/Users/idabjorn/Documents/repositories/festivalbookingsystem/Festivalproject.Client/wwwroot/festivalPic.jpg",
+      "PackagePath": "staticwebassets/festivalPic.jpg"
+    },
+    {
+      "Id": "/Users/idabjorn/Documents/repositories/festivalbookingsystem/Festivalproject.Client/wwwroot/index.html",
+      "PackagePath": "staticwebassets/index.html"
+    },
+    {
+      "Id": "/Users/idabjorn/Documents/repositories/festivalbookingsystem/Festivalproject.Client/wwwroot/jade-masri-74tlEYKgrBE-unsplash.jpg",
+      "PackagePath": "staticwebassets/jade-masri-74tlEYKgrBE-unsplash.jpg"
+    },
+    {
+      "Id": "/Users/idabjorn/Documents/repositories/festivalbookingsystem/Festivalproject.Client/wwwroot/jay-wennington-D50-Scbp1HU-unsplash.jpg",
+      "PackagePath": "staticwebassets/jay-wennington-D50-Scbp1HU-unsplash.jpg"
+    },
+    {
+      "Id": "/Users/idabjorn/Documents/repositories/festivalbookingsystem/Festivalproject.Client/wwwroot/joey-thompson-4zN_-PKsbWw-unsplash.jpg",
+      "PackagePath": "staticwebassets/joey-thompson-4zN_-PKsbWw-unsplash.jpg"
+    },
+    {
+      "Id": "/Users/idabjorn/Documents/repositories/festivalbookingsystem/Festivalproject.Client/wwwroot/josh-durham-Bpp0iwosSWc-unsplash.jpg",
+      "PackagePath": "staticwebassets/josh-durham-Bpp0iwosSWc-unsplash.jpg"
+    },
+    {
+      "Id": "/Users/idabjorn/Documents/repositories/festivalbookingsystem/Festivalproject.Client/wwwroot/js/fullcalender.js",
+      "PackagePath": "staticwebassets/js/fullcalender.js"
+    },
+    {
+      "Id": "/Users/idabjorn/Documents/repositories/festivalbookingsystem/Festivalproject.Client/wwwroot/krists-luhaers-DSB1MZWsGco-unsplash.jpg",
+      "PackagePath": "staticwebassets/krists-luhaers-DSB1MZWsGco-unsplash.jpg"
+    },
+    {
+      "Id": "/Users/idabjorn/Documents/repositories/festivalbookingsystem/Festivalproject.Client/wwwroot/pexels-taryn-elliott-3326187-1920x1080-24fps.mp4",
+      "PackagePath": "staticwebassets/pexels-taryn-elliott-3326187-1920x1080-24fps.mp4"
+    },
+    {
+      "Id": "/Users/idabjorn/Documents/repositories/festivalbookingsystem/Festivalproject.Client/wwwroot/sample-data/weather.json",
+      "PackagePath": "staticwebassets/sample-data/weather.json"
+    },
+    {
+      "Id": "/Users/idabjorn/Documents/repositories/festivalbookingsystem/Festivalproject.Client/wwwroot/tony-pham-FUmDe-Bx1LA-unsplash.jpg",
+      "PackagePath": "staticwebassets/tony-pham-FUmDe-Bx1LA-unsplash.jpg"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.Festivalproject.Client.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.build.Festivalproject.Client.props",
+      "PackagePath": "build\\Festivalproject.Client.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.buildMultiTargeting.Festivalproject.Client.props",
+      "PackagePath": "buildMultiTargeting\\Festivalproject.Client.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.buildTransitive.Festivalproject.Client.props",
+      "PackagePath": "buildTransitive\\Festivalproject.Client.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

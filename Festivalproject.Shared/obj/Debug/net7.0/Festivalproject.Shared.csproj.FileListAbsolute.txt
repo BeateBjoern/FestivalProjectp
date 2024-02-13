@@ -1,0 +1,12 @@
+/Users/idabjorn/Documents/repositories/festivalbookingsystem/Festivalproject.Shared/bin/Debug/net7.0/Festivalproject.Shared.deps.json
+/Users/idabjorn/Documents/repositories/festivalbookingsystem/Festivalproject.Shared/bin/Debug/net7.0/Festivalproject.Shared.dll
+/Users/idabjorn/Documents/repositories/festivalbookingsystem/Festivalproject.Shared/bin/Debug/net7.0/Festivalproject.Shared.pdb
+/Users/idabjorn/Documents/repositories/festivalbookingsystem/Festivalproject.Shared/obj/Debug/net7.0/Festivalproject.Shared.csproj.AssemblyReference.cache
+/Users/idabjorn/Documents/repositories/festivalbookingsystem/Festivalproject.Shared/obj/Debug/net7.0/Festivalproject.Shared.GeneratedMSBuildEditorConfig.editorconfig
+/Users/idabjorn/Documents/repositories/festivalbookingsystem/Festivalproject.Shared/obj/Debug/net7.0/Festivalproject.Shared.AssemblyInfoInputs.cache
+/Users/idabjorn/Documents/repositories/festivalbookingsystem/Festivalproject.Shared/obj/Debug/net7.0/Festivalproject.Shared.AssemblyInfo.cs
+/Users/idabjorn/Documents/repositories/festivalbookingsystem/Festivalproject.Shared/obj/Debug/net7.0/Festivalproject.Shared.csproj.CoreCompileInputs.cache
+/Users/idabjorn/Documents/repositories/festivalbookingsystem/Festivalproject.Shared/obj/Debug/net7.0/Festivalproject.Shared.dll
+/Users/idabjorn/Documents/repositories/festivalbookingsystem/Festivalproject.Shared/obj/Debug/net7.0/refint/Festivalproject.Shared.dll
+/Users/idabjorn/Documents/repositories/festivalbookingsystem/Festivalproject.Shared/obj/Debug/net7.0/Festivalproject.Shared.pdb
+/Users/idabjorn/Documents/repositories/festivalbookingsystem/Festivalproject.Shared/obj/Debug/net7.0/ref/Festivalproject.Shared.dll

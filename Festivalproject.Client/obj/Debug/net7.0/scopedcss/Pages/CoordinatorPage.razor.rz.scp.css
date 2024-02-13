@@ -1,0 +1,34 @@
+.tableHeadInfo[b-c802w2fvbf] {
+    margin-bottom: 25px;
+}
+
+.ButtonsBox[b-c802w2fvbf] {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.vagtBox[b-c802w2fvbf] {
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    background-color: #d3d3d3ad;
+}
+
+.white-text[b-c802w2fvbf] {
+    font-weight: bold;
+}
+
+.row[b-c802w2fvbf] {
+    justify-content: space-between;
+}
+
+.LedigeSkrift[b-c802w2fvbf],
+.OptagetSkrift[b-c802w2fvbf] {
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(79, 70, 229);
+}

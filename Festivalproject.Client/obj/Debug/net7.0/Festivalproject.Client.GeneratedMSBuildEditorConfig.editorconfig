@@ -1,0 +1,71 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = browser
+build_property.RootNamespace = Festivalproject.Client
+build_property.RootNamespace = Festivalproject.Client
+build_property.ProjectDir = /Users/idabjorn/Documents/repositories/festivalbookingsystemPublic/Festivalproject.Client/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /Users/idabjorn/Documents/repositories/festivalbookingsystemPublic/Festivalproject.Client
+build_property._RazorSourceGeneratorDebug = 
+
+[/Users/idabjorn/Documents/repositories/festivalbookingsystemPublic/Festivalproject.Client/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/idabjorn/Documents/repositories/festivalbookingsystemPublic/Festivalproject.Client/Components/CreateShiftDialog.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9DcmVhdGVTaGlmdERpYWxvZy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/idabjorn/Documents/repositories/festivalbookingsystemPublic/Festivalproject.Client/Components/ShiftList.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9TaGlmdExpc3QucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/idabjorn/Documents/repositories/festivalbookingsystemPublic/Festivalproject.Client/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/idabjorn/Documents/repositories/festivalbookingsystemPublic/Festivalproject.Client/Pages/VolunteerPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVm9sdW50ZWVyUGFnZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/idabjorn/Documents/repositories/festivalbookingsystemPublic/Festivalproject.Client/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/idabjorn/Documents/repositories/festivalbookingsystemPublic/Festivalproject.Client/Components/ShiftsDialog.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9TaGlmdHNEaWFsb2cucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-9qrlxas3h9
+
+[/Users/idabjorn/Documents/repositories/festivalbookingsystemPublic/Festivalproject.Client/Pages/AvailableShifts.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQXZhaWxhYmxlU2hpZnRzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-ny4gwzsljr
+
+[/Users/idabjorn/Documents/repositories/festivalbookingsystemPublic/Festivalproject.Client/Pages/CoordinatorPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ29vcmRpbmF0b3JQYWdlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-c802w2fvbf
+
+[/Users/idabjorn/Documents/repositories/festivalbookingsystemPublic/Festivalproject.Client/Pages/Registrer.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUmVnaXN0cmVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-1zxgwywywo
+
+[/Users/idabjorn/Documents/repositories/festivalbookingsystemPublic/Festivalproject.Client/Pages/SignIn.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2lnbkluLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-pr003shzgy
+
+[/Users/idabjorn/Documents/repositories/festivalbookingsystemPublic/Festivalproject.Client/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL01haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-dy3okko9gk

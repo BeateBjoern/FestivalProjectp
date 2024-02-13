@@ -1,0 +1,152 @@
+@page "/AvailableShifts"
+@using Festivalproject.Shared.Models
+@using Festivalproject.Client.Components
+@using Blazored.Modal.Services
+@using Festivalproject.Client.Services
+@using System.Text.Json
+
+@inject IJSRuntime JSRuntime
+@inject IModalService ModalService
+@inject NavigationManager NavManager
+@inject IUserService userService; 
+@inject IShiftService shiftService;
+@inject NavigationManager NavigationManager
+
+<div class="Wrapper">
+    <div class="HeaderContainer">
+        <h3>Hej @user.FirstName. Nedenfor ser du alle tilgængeligevagter, du er velkommen til at melde dig på de vagter du ønsker.</h3>
+    </div>
+
+    <div class="BackContainer">
+        <div class="BackBtnContainer">
+            <button @onclick="NavigateToProfile" class="Back">Tilbage til din profil</button>
+        </div>
+    </div>
+
+    <div class="GridContainer">
+        <div id="shifts-container">
+            <div class="shift-types">
+                <div class="shift-type">
+                    <h3 class="Vagtheader">Vagt typer</h3>
+                </div>
+                <div class="shift-type">
+                    <span class="shift-dot" style="background-color: #6D9EEB"></span>
+                    <span>Parkeringsvagt</span>
+                </div>
+                <div class="shift-type">
+                    <span class="shift-dot" style="background-color: #D4BF77"></span>
+                    <span>Toiletvagt</span>
+                </div>
+                <div class="shift-type">
+                    <span class="shift-dot" style="background-color: #7BB661"></span>
+                    <span>Indgangvagt</span>
+                </div>
+                <div class="shift-type">
+                    <span class="shift-dot" style="background-color: #E67399"></span>
+                    <span>Parkeringsvagt</span>
+                </div>
+                <div class="shift-type">
+                    <span class="shift-dot" style="background-color: #DB843D"></span>
+                    <span>Køkkenvagt</span>
+                </div>
+                <div class="shift-type">
+                    <span class="shift-dot" style="background-color: #A47AE2"></span>
+                    <span>Sikkerhedsvagt</span>
+                </div>
+            </div>
+        </div>
+        <div class="MainContentContainer">
+            <div id="main-content">
+                <div id="calendar"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@code {
+
+    //declaring the parameters being used on the page
+    [Parameter]
+    
+    //declaring parameters that are used to display correct information on the page via html
+    //and being able to use the user class
+    [SupplyParameterFromQuery]
+    public string? id { get; set; }
+    private User user { get; set; } = new();
+    
+
+    private List<Shift> AvailableShift { get; set; } = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        Console.WriteLine("OnInitializedAsync called.");
+        user = await userService.GetUserByObjectId(id);
+
+    //fetching shifts the are isOccupied = false
+        AvailableShift = await shiftService.GetShiftsByStatus(false);
+
+
+    // Creating a DotNetObjectReference to pass to JavaScript later
+        var dotNetReference = DotNetObjectReference.Create(this);
+
+    // Convert the list of AvailableShift to an array of events
+    // that's later passed over to the Javscript function
+        var events = AvailableShift.Select(s => new
+        {
+    // Setting the properties of the event objects in the array
+            shiftId = s.Id,
+            title = s.Name,
+            start = s.startTime.ToString("o"),
+            end = s.endTime.ToString("o"),
+            description = s.Description,
+            area = s.Area,
+            _duration = Convert.ToString(s.Duration),
+            type = s.Type,
+            _userId = id
+        }).ToArray();
+
+    // Importing the JS file from "wwwroot/js"
+        var module = await JSRuntime.InvokeAsync<IJSObjectReference>("import", "./js/fullcalender.js");
+        Console.WriteLine("Imported JavaScript module.");
+    //calling the initializeCalendar function from the JS file with the events array and the dotNetReference
+        await module.InvokeVoidAsync("initializeCalendar", new object[] { events, dotNetReference });
+        Console.WriteLine("Called initializeCalendar from JavaScript.");
+
+    }
+
+
+
+    //function that is called from the JS file when a shift is clicked
+    [JSInvokable]
+    public async Task ShiftsDialog(string shiftType, string shiftId, string shiftName, DateTime shiftStart, DateTime shiftEnd, string shiftDescription, string shiftArea, string shiftDuration, string shiftUserId)
+    {
+        Console.WriteLine(shiftEnd);
+        var options = new ModalOptions
+        {
+            OverlayCustomClass = "custom-modal-overlay",
+            Size = ModalSize.Medium
+        };
+        var parameters = new ModalParameters();
+        parameters.Add("ModalShiftType", shiftType);
+        parameters.Add("ModalShiftId", shiftId);
+        parameters.Add("ModalShiftTitle", shiftName);
+        parameters.Add("ModalShiftStart", shiftStart);
+        parameters.Add("ModalShiftEnd", shiftEnd);
+        parameters.Add("ModalShiftDescription", shiftDescription);
+        parameters.Add("ModalShiftArea", shiftArea);
+        parameters.Add("ModalShiftDuration", shiftDuration);
+        parameters.Add("ModalUserId", shiftUserId);
+
+        var dialog = ModalService.Show<ShiftsDialog>("", parameters, options);
+        var result = await dialog.Result;
+    }
+    
+    // Navigates to voluenteer with specified id. 
+    public void NavigateToProfile()
+    {
+        NavigationManager.NavigateTo($"/volunteer?id={id}");
+    }
+    
+
+}
