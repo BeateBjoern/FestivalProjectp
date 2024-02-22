@@ -1,3 +1,11 @@
 # festivalbookingsystem
 
-https://lemon-stone-0a9837910.3.azurestaticapps.net/
+Scope: Create a booking application for volunteers and volunteer administrators for a fictional festival. 
+
+Technologies:
+  .NET
+  C# 
+  Blazor WASM
+  web api 
+  MongoDB/MongoDBAtlas
+  Github 
